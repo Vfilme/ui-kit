@@ -1,0 +1,32 @@
+$borderPrimary: $black300;
+$borderSecondary: $black100;
+$borderFocus: $blackMain;
+$borderAccent: $pirpleMain;
+$borderAccentHover: $pirple700;
+$borderAccentActive: $pirple800;
+$borderCritical: $redMain;
+
+:root {
+  --border-radius: 8px;
+}
+
+@media (max-width: 1440px) {
+  :root {
+    --border-radius: 8px;
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    --border-radius: 6px;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --border-radius: 4px;
+  }
+}
+@media (max-width: 320px) {
+  :root {
+    --border-radius: 4px;
+  }
+}
