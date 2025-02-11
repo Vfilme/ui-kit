@@ -1,0 +1,113 @@
+.button {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  transition: 0.3s ease;
+  color: white;
+  display: flex;
+  align-items: center;
+  &.primary {
+    background: rgba(151, 71, 255, 1);
+    color: white;
+    &:hover {
+      background: rgba(134, 40, 255, 1);
+    }
+    &:active {
+      background: rgba(122, 19, 255, 1);
+    }
+    &:disabled {
+      background: rgba(8, 9, 28, 0.08);
+      color: rgba(8, 9, 28, 0.36);
+    }
+  }
+  &.secondary {
+    background: rgba(151, 71, 255, 0.06);
+    color: rgba(151, 71, 255, 1);
+    &:hover {
+      background: rgba(151, 71, 255, 0.1);
+    }
+    &:active {
+      background: rgba(151, 71, 255, 0.14);
+    }
+    &:disabled {
+      background: rgba(8, 9, 28, 0.08);
+      color: rgba(8, 9, 28, 0.36);
+    }
+  }
+  &.clear {
+    color: rgba(151, 71, 255, 1);
+    &:hover {
+      color: rgba(134, 40, 255, 1);
+    }
+    &:active {
+      color: rgba(122, 19, 255, 1);
+    }
+    &:disabled {
+      color: rgba(8, 9, 28, 0.36);
+    }
+  }
+  &.critical {
+    background-color: rgba(229, 69, 69, 1);
+    &:hover {
+      background-color: rgba(229, 46, 46, 1);
+    }
+    &:active {
+      background-color: rgba(229, 23, 23, 1);
+    }
+    &:disabled {
+      background-color: rgba(8, 9, 28, 0.08);
+      color: rgba(8, 9, 28, 0.36);
+    }
+  }
+  &.critical-secondary {
+    background-color: rgba(229, 69, 69, 0.06);
+    color: rgba(229, 69, 69, 1);
+    &:hover {
+      background-color: rgba(229, 46, 46, 0.1);
+      color: rgba(229, 46, 46, 1);
+    }
+    &:active {
+      background-color: rgba(229, 23, 23, 0.14);
+      color: rgba(229, 23, 23, 1);
+    }
+    &:disabled {
+      background-color: rgba(8, 9, 28, 0.08);
+      color: rgba(8, 9, 28, 0.36);
+    }
+  }
+  &.lg {
+    height: 48px;
+    border-radius: 8px;
+    padding: 16px 18px;
+    gap: 10px;
+    font-size: 16px;
+  }
+  &.md {
+    height: 40px;
+    border-radius: 6px;
+    padding: 16px;
+    gap: 8px;
+    font-size: 14px;
+  }
+  &.sm {
+    height: 32px;
+    border-radius: 4px;
+    padding: 16px 14px;
+    gap: 8px;
+    font-size: 12px;
+  }
+  &.xsm {
+    height: 24px;
+    border-radius: 4px;
+    padding: 16px 12px;
+    gap: 8px;
+    font-size: 10px;
+  }
+  &.rounded {
+    border-radius: 64px;
+  }
+  &.mini {
+    aspect-ratio: 1 / 1;
+  }
+}
