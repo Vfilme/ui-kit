@@ -1,0 +1,78 @@
+@use '../../styles/variables' as *;
+
+.label {
+  display: flex;
+  flex-direction: column;
+  color: $textSecondary;
+  .input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid $borderPrimary;
+    color: $textSecondary;
+    transition: 0.3s ease;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    &:hover {
+      background-color: $bgSecondaryHover;
+      border: 1px solid transparent;
+      color: $textPrimary;
+    }
+    &:hover + .helperText {
+      color: $textPrimary;
+    }
+    &:focus {
+      background-color: $bgPrimary;
+      border: 1px solid $borderAccent;
+    }
+    &:focus + .helperText {
+      color: $textPrimary;
+    }
+    &:disabled {
+      background-color: $bgDisapled;
+      border-color: transparent;
+      color: $textDisapled;
+    }
+    &:disabled + .helperText {
+      color: $textDisapled;
+    }
+    &.rounded {
+      border-radius: 64px;
+    }
+    &.error {
+      color: $textCritical;
+      border-color: $borderCritical;
+    }
+    &.error + .helperText {
+      color: $textCritical;
+    }
+  }
+  &.lg {
+    font: $fontP7;
+    .input {
+      font: $fontP3;
+      height: 48px;
+      padding: 14px 18px;
+    }
+  }
+  &.md {
+    font: $fontP7;
+    .input {
+      font: $fontP5;
+      height: 40px;
+      padding: 10px 16px;
+    }
+  }
+  &.sm {
+    font: $fontP9;
+    .input {
+      font: $fontP7;
+      height: 32px;
+      padding: 6px 14px;
+    }
+  }
+}

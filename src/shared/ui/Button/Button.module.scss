@@ -1,79 +1,79 @@
+@use '../../styles/variables' as *;
+
 .button {
   all: unset;
+  color: white;
+
   cursor: pointer;
   text-align: center;
   user-select: none;
   transition: 0.3s ease;
-  color: white;
   display: flex;
   align-items: center;
+
   &.primary {
-    background: rgba(151, 71, 255, 1);
-    color: white;
+    background-color: $bgAccent;
     &:hover {
-      background: rgba(134, 40, 255, 1);
+      background-color: $bgAccentHover;
     }
     &:active {
-      background: rgba(122, 19, 255, 1);
+      background-color: $bgAccentActive;
     }
     &:disabled {
-      background: rgba(8, 9, 28, 0.08);
-      color: rgba(8, 9, 28, 0.36);
+      background-color: $bgDisapled;
     }
   }
   &.secondary {
-    background: rgba(151, 71, 255, 0.06);
-    color: rgba(151, 71, 255, 1);
+    background-color: $bgAccentSubdued;
+    color: $textAccent;
     &:hover {
-      background: rgba(151, 71, 255, 0.1);
+      background-color: $bgAccentSubduedHover;
     }
     &:active {
-      background: rgba(151, 71, 255, 0.14);
+      background-color: $bgAccentSubduedActive;
     }
     &:disabled {
-      background: rgba(8, 9, 28, 0.08);
-      color: rgba(8, 9, 28, 0.36);
+      background-color: $bgDisapled;
     }
   }
   &.clear {
-    color: rgba(151, 71, 255, 1);
+    background-color: $bgPrimary;
+    color: $textAccent;
     &:hover {
-      color: rgba(134, 40, 255, 1);
+      color: $textAccentHover;
     }
     &:active {
-      color: rgba(122, 19, 255, 1);
+      color: $textAccentActive;
     }
     &:disabled {
-      color: rgba(8, 9, 28, 0.36);
+      background-color: $bgPrimary;
     }
   }
   &.critical {
-    background-color: rgba(229, 69, 69, 1);
+    background-color: $textCritical;
     &:hover {
-      background-color: rgba(229, 46, 46, 1);
+      background-color: $textCriticalHover;
     }
     &:active {
-      background-color: rgba(229, 23, 23, 1);
+      background-color: $textCriticalActive;
     }
     &:disabled {
-      background-color: rgba(8, 9, 28, 0.08);
-      color: rgba(8, 9, 28, 0.36);
+      background-color: $bgDisapled;
     }
   }
   &.critical-secondary {
-    background-color: rgba(229, 69, 69, 0.06);
-    color: rgba(229, 69, 69, 1);
+    background-color: $bgCriticalSubdued;
+    color: $textCritical;
     &:hover {
-      background-color: rgba(229, 46, 46, 0.1);
-      color: rgba(229, 46, 46, 1);
+      background-color: $bgCriticalSubduedHover;
+      color: $textCriticalHover;
     }
     &:active {
-      background-color: rgba(229, 23, 23, 0.14);
-      color: rgba(229, 23, 23, 1);
+      background-color: $bgCriticalSubduedActive;
+      color: $textCriticalActive;
     }
     &:disabled {
-      background-color: rgba(8, 9, 28, 0.08);
-      color: rgba(8, 9, 28, 0.36);
+      background-color: $bgDisapled;
     }
   }
   &.lg {
@@ -103,6 +103,11 @@
     padding: 16px 12px;
     gap: 8px;
     font-size: 10px;
+  }
+  &:disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    color: $textDisapled;
   }
   &.rounded {
     border-radius: 64px;

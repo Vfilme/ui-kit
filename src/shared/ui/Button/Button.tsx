@@ -15,7 +15,14 @@ export const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={cn(styles.button, styles[variant], styles[size], styles[format], className)}
+      className={cn(
+        styles.button,
+        styles[variant],
+        styles[size],
+        styles[format],
+        { [styles.rounded]: rounded },
+        className
+      )}
       disabled={disabled}
       {...props}
     >

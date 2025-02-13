@@ -14,8 +14,7 @@
     "classnames": "^2.5.1",
     "next": "15.1.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "sass": "^1.84.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
@@ -33,6 +32,8 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "eslint-plugin-storybook": "^0.11.2",
+    "sass": "^1.84.0",
+    "sass-loader": "^13.3.3",
     "storybook": "^8.5.3",
     "storybook-addon-pseudo-states": "^4.0.2",
     "typescript": "^5"
