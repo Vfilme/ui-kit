@@ -1,0 +1,47 @@
+@use '../../styles/variables' as *;
+
+.label {
+  display: flex;
+  flex-direction: column;
+  color: $textPrimary;
+  &.lg,
+  &.md {
+    font: $fontP7;
+  }
+  &.sm,
+  &.xsm {
+    font: $fontP9;
+  }
+  .textarea {
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    resize: none;
+    overflow: auto;
+    max-height: 80px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 14px 4px 14px 18px;
+    color: $textSecondary;
+    border: 1px solid $borderPrimary;
+    &.lg {
+      font: $fontP3;
+    }
+    &.md {
+      font: $fontP5;
+    }
+    &.sm {
+      font: $fontP7;
+    }
+    &.xsm {
+      font: $fontP9;
+    }
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background-color: $bgSecondary;
+    }
+  }
+}
