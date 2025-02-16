@@ -1,0 +1,52 @@
+@use '../../styles/variables' as *;
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: $textPrimary;
+  font: $fontP6;
+  &.lg {
+    .customCheckbox {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &.md {
+    .customCheckbox {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  &.sm {
+    .customCheckbox {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &.xsm {
+    .customCheckbox {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  .input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    &:hover + .customCheckbox {
+      fill: $iconAccentHover;
+    }
+    &:active + .customCheckbox {
+      fill: $iconAccentActive;
+    }
+    &:disabled + .customCheckbox {
+      fill: $iconDisapled;
+    }
+  }
+  .customCheckbox {
+    display: inline-block;
+    fill: $bgAccent;
+    transition: 0.15s ease-out;
+  }
+}
