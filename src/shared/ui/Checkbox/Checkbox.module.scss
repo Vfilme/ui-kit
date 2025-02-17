@@ -41,7 +41,7 @@
       fill: $iconAccentActive;
     }
     &:disabled + .customCheckbox {
-      fill: $iconDisapled;
+      fill: $iconDisabled;
     }
   }
   .customCheckbox {

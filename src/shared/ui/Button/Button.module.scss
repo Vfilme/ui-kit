@@ -3,7 +3,6 @@
 .button {
   all: unset;
   color: white;
-
   cursor: pointer;
   text-align: center;
   user-select: none;
@@ -20,7 +19,7 @@
       background-color: $bgAccentActive;
     }
     &:disabled {
-      background-color: $bgDisapled;
+      background-color: $bgDisabled;
     }
   }
   &.secondary {
@@ -33,7 +32,7 @@
       background-color: $bgAccentSubduedActive;
     }
     &:disabled {
-      background-color: $bgDisapled;
+      background-color: $bgDisabled;
     }
   }
   &.clear {
@@ -58,7 +57,7 @@
       background-color: $textCriticalActive;
     }
     &:disabled {
-      background-color: $bgDisapled;
+      background-color: $bgDisabled;
     }
   }
   &.critical-secondary {
@@ -73,7 +72,7 @@
       color: $textCriticalActive;
     }
     &:disabled {
-      background-color: $bgDisapled;
+      background-color: $bgDisabled;
     }
   }
   &.lg {
@@ -81,33 +80,33 @@
     border-radius: 8px;
     padding: 16px 18px;
     gap: 10px;
-    font-size: 16px;
+    font: $fontP4;
   }
   &.md {
     height: 40px;
     border-radius: 6px;
     padding: 16px;
     gap: 8px;
-    font-size: 14px;
+    font: $fontP6;
   }
   &.sm {
     height: 32px;
     border-radius: 4px;
     padding: 16px 14px;
     gap: 8px;
-    font-size: 12px;
+    font: $fontP8;
   }
   &.xsm {
     height: 24px;
     border-radius: 4px;
     padding: 16px 12px;
     gap: 8px;
-    font-size: 10px;
+    font: $fontP10;
   }
   &:disabled {
     pointer-events: none;
     cursor: not-allowed;
-    color: $textDisapled;
+    color: $textDisabled;
   }
   &.rounded {
     border-radius: 64px;

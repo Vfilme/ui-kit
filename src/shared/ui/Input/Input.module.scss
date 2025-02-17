@@ -33,12 +33,12 @@
       color: $textPrimary;
     }
     &:disabled {
-      background-color: $bgDisapled;
+      background-color: $bgDisabled;
       border-color: transparent;
-      color: $textDisapled;
+      color: $textDisabled;
     }
     &:disabled + .helperText {
-      color: $textDisapled;
+      color: $textDisabled;
     }
     &.rounded {
       border-radius: 64px;
