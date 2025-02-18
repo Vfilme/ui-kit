@@ -7,27 +7,22 @@ $borderAccentHover: $pirple700;
 $borderAccentActive: $pirple800;
 $borderCritical: $redMain;
 
-:root {
-  --border-radius: 8px;
-}
+@mixin border-radius {
+  border-radius: 8px;
 
-@media (max-width: 1440px) {
-  :root {
-    --border-radius: 8px;
+  @media (max-width: 1440px) {
+    border-radius: 8px;
   }
-}
-@media (max-width: 1024px) {
-  :root {
-    --border-radius: 6px;
+
+  @media (min-width: 1024px) {
+    border-radius: 6px;
   }
-}
-@media (max-width: 768px) {
-  :root {
-    --border-radius: 4px;
+
+  @media (min-width: 768px) {
+    border-radius: 4px;
   }
-}
-@media (max-width: 320px) {
-  :root {
-    --border-radius: 4px;
+
+  @media (min-width: 320px) {
+    border-radius: 4px;
   }
 }
