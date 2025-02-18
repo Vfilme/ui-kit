@@ -1,0 +1,112 @@
+@use '../../styles/variables' as *;
+
+$default-transition: 0.15s ease-out;
+
+@mixin translateX($x) {
+  -webkit-transform: translateX($x);
+  -ms-transform: translateX($x);
+  transform: translateX($x);
+}
+
+@mixin setSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.toggle {
+  transition: $default-transition;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background-color: $bgSecondary;
+  &.lg {
+    @include setSize(40px, 20px);
+    .slider::before {
+      @include setSize(16px, 16px);
+    }
+  }
+  &.md {
+    @include setSize(36px, 18px);
+    .slider::before {
+      @include setSize(14px, 14px);
+    }
+  }
+  &.sm {
+    @include setSize(32px, 16px);
+    .slider::before {
+      @include setSize(12px, 12px);
+    }
+  }
+  &.xsm {
+    @include setSize(28px, 14px);
+    .slider::before {
+      @include setSize(10px, 10px);
+    }
+  }
+  .input {
+    opacity: 0;
+    @include setSize(0, 0);
+    &:hover + .slider {
+      background-color: $bgSecondaryHover;
+    }
+    &:active + .slider {
+      background-color: $bgSecondaryActive;
+    }
+    &:hover + .slider::before {
+      background-color: $bgAccentHover;
+    }
+    &:active + .slider::before {
+      background-color: $bgAccentActive;
+    }
+    &:checked + .slider {
+      background-color: $bgAccent;
+      border-color: $borderAccent;
+    }
+    &:checked + .slider::before {
+      background-color: $bgPrimary;
+    }
+    &:checked + .slider {
+      &.lg::before {
+        @include translateX(20px);
+      }
+      &.md::before {
+        @include translateX(18px);
+      }
+      &.sm::before {
+        @include translateX(16px);
+      }
+      &.xsm::before {
+        @include translateX(14px);
+      }
+    }
+    &:disabled + .slider {
+      background-color: $bgDisabled;
+      border-color: $borderPrimary;
+    }
+    &:disabled + .slider::before {
+      background-color: $bgDisabled;
+    }
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100px;
+    background-color: $bgSecondary;
+    border: 1px solid $borderPrimary;
+    &::before {
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      content: '';
+      background-color: $bgPrimaryInverse;
+      -webkit-transition: transition;
+      transition: $default-transition;
+      border-radius: 100%;
+    }
+  }
+}
