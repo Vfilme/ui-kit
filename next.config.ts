@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
 
     return config;
   },
+  sassOptions: {
+    prependData: `@use 'src/shared/styles/variables' as *;`,
+  },
 };
 
 export default nextConfig;
